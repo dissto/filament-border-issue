@@ -35,13 +35,13 @@ class UserResource extends Resource
                     ->password()
                     ->required(),
 
-                Section::make('hobby')
+                // Section::make('hobby')
+                // ->schema([
+                Repeater::make('hobbies')
                     ->schema([
-                        Repeater::make('hobbies')
-                            ->schema([
-                                Forms\Components\TextInput::make('hobby'),
-                            ]),
-                    ])
+                        Forms\Components\TextInput::make('hobby'),
+                    ]),
+                // ])
             ]);
     }
 
